@@ -1,0 +1,164 @@
+* {
+  font-family: raleway;
+  
+}
+
+body,
+html {
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100vw;
+  
+
+}
+nav {
+  background-color: black;
+  min-height: 120px;
+}
+#sobremi {
+  margin-top: 120px;
+  padding-top: 35px;
+  padding-bottom: 92px;
+  
+}
+/*sirve para hacer que el scrool del enlace no se coma por el nav y que quede justo alineado*/
+#sobremi, #habilidades,#proyectos,#contactame{
+scroll-margin-top: 120px;
+scroll-behavior: smooth;
+}
+
+#bannerPrePagina {
+  padding-top: 60px;
+  margin-bottom: 45px;
+}
+
+
+
+/* css para las bolas de la listas */
+.responsive-list-item::marker {
+  color: #F7A009; /* Color personalizado */
+  font-size: 1.4em; /* Aumenta el tamaño */
+}
+
+
+
+/* css para hacer responsivo el logo*/
+.responsive-logo {
+  width: 100%; /* Ocupa todo el espacio disponible */
+  max-width: 280px; /* Tamaño grande en pantallas grandes */
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  .responsive-logo {
+    max-width: 200px;
+  }
+}
+
+/* custom para la que la barra de progreso se ponga debajo de otra en movil*/
+.custom-flex-stack {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Fuerza apilamiento personalizado antes de los breakpoints Bootstrap */
+@media (max-width: 1000px) {
+  .custom-flex-stack {
+    flex-direction: column;
+    margin-top: 30px;
+    
+  }
+
+  .custom-flex-stack > [class^="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+
+.herramientas-texto{
+  color:#F7A009;
+}
+
+
+/*cambiar el boton de Linkedin de color*/
+.custom-linkedin-button {
+  color: #000000;
+  border-color: #0a0a0a;
+  background-color: #ffffff;
+  font-weight: 600;
+  
+}
+
+.custom-linkedin-button:hover {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border-color: #ffffff;
+}
+/*cambiar el boton de Github de color*/
+.custom-github-button {
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: #000000;
+  
+}
+
+.custom-github-button:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-color: #000000;
+}
+
+/*Hover para los links del navegador*/
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #F6A013 !important; 
+}
+
+.hover-underline {
+  font-size: 1rem;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #F6A013, #F6A013);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
+}
+
+/*hover para los iconos de redes sociales*/
+.botonRedes {
+  transition: color 0.3s ease;
+  color: white;
+}
+
+.botonRedes:hover {
+  color: #F6A013 !important; 
+}
