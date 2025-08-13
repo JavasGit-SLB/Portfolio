@@ -29,6 +29,7 @@ desarrollo no he parado de aprender."
           habilidades={[
             { herramienta: "|| VScode", valor: 95 },
             { herramienta: "|| Eclipse", valor: 80 },
+            
           ]}
         />
         <BarraSkill
