@@ -20,12 +20,11 @@ function App() {
         </section>
         <section aria-label="Sección de trayectoria profesional y formación académica" >
           <BannerPrePagina
-            textoButton="Trayectoria"
-            textoParrafo="Mi objetivo es crecer en el ámbito 
-        del desarrollo de software y websites."
-            textColorButton="white"
+            textoButton="( Trayectoria )  =>"
+            textoParrafo="{ Mi objetivo es crecer en el ámbito 
+        del desarrollo de software y websites }"
+            textColorButton="black"
             textColorParrafo="black"
-            bgColorButton="black"
             bgColor="white"
             id="trayectoria"
           />
@@ -38,12 +37,11 @@ function App() {
         </section>
         <section>
           <BannerPrePagina
-            textoButton="Proyectos"
-            textoParrafo="Aplico cada aprendizaje, tecnología
-y metodología a mis proyectos."
-            textColorButton="white"
+            textoButton="( Proyectos )  =>"
+            textoParrafo="{ Aplico cada aprendizaje, tecnología
+y metodología a mis proyectos }"
+            textColorButton="black"
             textColorParrafo="black"
-            bgColorButton="black"
             bgColor="white"
             id="proyectos"
           />

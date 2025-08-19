@@ -1,6 +1,6 @@
 * {
-  font-family: raleway;
-  
+  font-family: raleway,sans-serif;
+
 }
 
 body,
@@ -162,3 +162,119 @@ scroll-behavior: smooth;
 .botonRedes:hover {
   color: #F6A013 !important; 
 }
+
+/* Lightbox del card  */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1055; /* por encima de bootstrap modal si lo usas */
+  padding: 1rem;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: none;
+}
+
+.lightbox-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+.lightbox-img {
+  /* COMPORTAMIENTO POR DEFECTO (móvil / pantallas pequeñas) */
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+  border-radius: 4px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.6);
+}
+
+/* --- Ajuste para pantallas grandes: mostrar la imagen notablemente más grande --- */
+/* Usamos el breakpoint lg (>= 992px) de Bootstrap. Ajusta 1200px si quieres mayor o menor tamaño. */
+@media (min-width: 992px) {
+  .lightbox-img {
+    /* Permitimos que la imagen ocupe mucho más espacio en pantallas grandes.
+       max-width se fija en un valor grande pero respetando el viewport.
+       max-height también se reduce un poco para dejar margen visual. */
+    max-width: min(1000px, 95vw);
+    max-height: calc(100vh - 120px); /* deja espacio arriba/abajo para el botón cerrar y margen */
+    width: 100%;
+    height: auto;
+  }
+
+  .lightbox-overlay {
+    padding: 2rem; /* más margen alrededor en pantallas grandes */
+  }
+
+  .lightbox-nav {
+    font-size: 3.6rem;
+  }
+
+  .lightbox-close {
+    font-size: 1.15rem;
+  }
+}
+
+/* Navegación y controles */
+.lightbox-nav {
+  background: transparent;
+  border: none;
+  font-size: 3rem;
+  line-height: 1;
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  opacity: 0.9;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+.lightbox-nav:disabled { opacity: 0.25; cursor: default; }
+.lightbox-nav.left { left: 8px; }
+.lightbox-nav.right { right: 8px; }
+
+/* Close button */
+.lightbox-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: rgba(255,255,255,0.06);
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Footer counter */
+.lightbox-footer {
+  margin-top: 0.6rem;
+  color: #ddd;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
