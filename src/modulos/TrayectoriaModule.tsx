@@ -35,8 +35,8 @@ I.E.S. Pablo Picasso (LOE 2000h) | 2013 - 2015`,
 ];
 
 function TrayectoriaModule() {
-  const [mostrarFormacion, setMostrarFormacion] = useState(true);
-  const lista = mostrarFormacion ? experiencia : formacion;
+  const [mostrarInformacion, setMostrarInformacion] = useState(true);
+  const lista = mostrarInformacion ? experiencia : formacion;
 
   return (
       <div className="container px-5 px-sm-1" style={{ paddingBottom: "92px" }} >
@@ -47,7 +47,7 @@ function TrayectoriaModule() {
               onLeftLabel="Experiencia Laboral"
               onRightLabel="Datos Académicos"
               aria-label="Sección de trayectoria profesional y formación académica"
-              onToggle={(isRight) => setMostrarFormacion(isRight)}
+              onToggle={(isRight) => setMostrarInformacion(isRight)}
             />
           </div>
         </div>
@@ -62,7 +62,7 @@ function TrayectoriaModule() {
 
                   return (
                     <motion.li
-                      key={`${mostrarFormacion}-${idx}`} // clave cambia al cambiar lista
+                      key={`${mostrarInformacion}-${idx}`} // clave cambia al cambiar lista
                       className="responsive-list-item"
                       style={{
                         whiteSpace: "pre-line",

@@ -6,6 +6,8 @@ type cardProyectoProps = {
   herramientas: string[];
 };
 
+// Componente para la visualización de imágenes en pantalla completa
+
 function Lightbox({
   images,
   initialIndex = 0,
@@ -20,9 +22,10 @@ function Lightbox({
   const pointerStartX = useRef<number | null>(null);
 
   useEffect(() => {
+    // control del teclado cuando el componente está activo
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-      if (e.key === "ArrowLeft") setIndex((i) => Math.max(0, i - 1));
+      if (e.key === "Escape") onClose(); //se cierra con cualquier tecla
+      if (e.key === "ArrowLeft") setIndex((i) => Math.max(0, i - 1)); //cambian los index con las flechas
       if (e.key === "ArrowRight") setIndex((i) => Math.min(images.length - 1, i + 1));
     };
     document.addEventListener("keydown", handleKey);
@@ -113,6 +116,8 @@ function Lightbox({
     </div>
   );
 }
+
+//Componente de card para la visualización de los proyectos => llama al lightbox al hacer click
 
 function CardProyecto({
   imagenes,
