@@ -1,11 +1,27 @@
 import CardProyecto from "../components/CardProyecto";
 
 function ProyectoModule() {
-  const imagenes = [
-    "https://placehold.co/550x400",
-    "https://placehold.co/550x400",
-    "https://placehold.co/550x400",
+  const portfolio = [
+    "/img/portfolio/Mockup_PORFOTLIO.png",
+    
   ];
+   const dungeoner = [
+    "/img/dungeoner/mockup01.png",
+    "/img/dungeoner/mockup02.png",
+
+  ];
+   const preguntas = [
+    "/img/preguntas/MOCKUP_Quest_V2.png",
+    "/img/preguntas/MOCKUP_Quest.png",
+
+  ];
+  const torneo = [
+    "/img/torneo/MOCKUP_TORNEO.png",
+    
+
+  ];
+
+  
   const herramientas = ["React", "HTML", "CSS", "Bootstrap"];
 
   return (
@@ -13,14 +29,14 @@ function ProyectoModule() {
       <div className="row ">
         <div className="col-12 col-lg-6 pt-5">
           <CardProyecto
-            imagenes={imagenes}
+            imagenes={portfolio}
             herramientas={herramientas}
             descripcion="Esto es una descripcion breve del proyectito guapo hecho increible"
           />
         </div>
         <div className="col-12 col-lg-6 pt-5">
           <CardProyecto
-            imagenes={imagenes}
+            imagenes={dungeoner}
             herramientas={herramientas}
             descripcion="Esto es una descripcion breve del proyectito guapo hecho increible"
           />
@@ -30,14 +46,14 @@ function ProyectoModule() {
       <div className="row">
         <div className="col-12 col-lg-6 pt-5">
           <CardProyecto
-            imagenes={imagenes}
+            imagenes={preguntas}
             herramientas={herramientas}
             descripcion="Esto es una descripcion breve del proyectito guapo hecho increible"
           />
         </div>
         <div className="col-12 col-lg-6 pt-5">
           <CardProyecto
-            imagenes={imagenes}
+            imagenes={torneo}
             herramientas={herramientas}
             descripcion="Esto es una descripcion breve del proyectito guapo hecho increible"
           />
