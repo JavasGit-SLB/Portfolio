@@ -1,4 +1,5 @@
-import PasaPagina from "../components/PasaPagina";
+/* eslint-disable no-irregular-whitespace */
+
 
 function SobremiModule() {
   return (
@@ -51,7 +52,7 @@ function SobremiModule() {
               className="text-wrap"
             >
               _Desarrollador Web Junior = () =&gt; {"{"} HTML || CSS -
-              TAILWIND - BOOTSTRAP || JAVASCRIPT - TYPESCRIPT - REACT || GIT ||
+              TAILWIND - BOOTSTRAP || JAVA - JAVASCRIPT - TYPESCRIPT - REACT || GIT ||
               SQL || NODE.JS || VITE || VSCODE {"}"}
             </p>
             <p
@@ -124,7 +125,7 @@ function SobremiModule() {
             </div>
 
             <p style={{ color: "white", fontFamily: "Space Grotesk" }}>
-              <span style={{ fontSize: "20px" }}>🟢</span>​​​ Open to work
+              <span style={{ fontSize: "20px" }}>🟢</span>​​ ​Open to work
             </p>
           </div>
           <div className="col-12 col-lg text-center text-md-end">

@@ -137,7 +137,7 @@ function CardProyecto({
 
   return (
     <>
-      <div className="card w-100">
+      <div className="card w-100 card-proyecto-fixed">
         <div id={idUnico} className="carousel slide">
           <div className="carousel-indicators">
             {imagenes.map((_, index) => (
@@ -199,9 +199,11 @@ function CardProyecto({
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-        <div className="card-body">
-          <p className="card-text">{descripcion}</p>
-          <p className="breadcrumb mb-0">
+        <div className="card-body" style={{marginTop: "20px"}}>
+          <p className="card-text" style={{fontWeight: "500", fontSize: "0.925rem", marginBottom: "30px"}}>
+            {descripcion}
+          </p>
+          <p className="breadcrumb mb-0" style={{color:"#6c757d", fontSize:"0.750rem"}}>
             {herramientas.map((herramienta, idx) => (
               <span key={idx}>
                 {herramienta}

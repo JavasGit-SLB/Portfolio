@@ -277,4 +277,17 @@ scroll-behavior: smooth;
   justify-content: center;
   width: 100%;
 }
+.card-proyecto-fixed {
+  height: 680px;
+  display: flex;
+  flex-direction: column;
+}
 
+.card-proyecto-fixed .carousel {
+  flex-shrink: 0;
+}
+
+.card-proyecto-fixed .card-body {
+  flex: 1 1 auto;
+  overflow: auto;
+}
