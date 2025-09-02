@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from "react-icons/fa";
-import { clamp } from "framer-motion";
+import { FaGithub, FaLinkedin, FaEnvelope} from "react-icons/fa";
+
 
 function ContactameModule() {
   useEffect(() => {

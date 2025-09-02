@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { linearGradient } from "framer-motion/client";
+
 
 type PasaPaginaProps = {
   backgroundColor: string;

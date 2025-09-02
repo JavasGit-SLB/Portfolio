@@ -1,4 +1,4 @@
-import React from "react";
+
 import BannerPrePagina from "../components/BannerPrePagina";
 import BarraSkill from "../components/BarraSkill";
 
