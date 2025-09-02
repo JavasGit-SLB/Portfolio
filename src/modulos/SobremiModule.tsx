@@ -130,7 +130,7 @@ function SobremiModule() {
           </div>
           <div className="col-12 col-lg text-center text-md-end">
             <img
-              src="/img/FotoPerfil.png"
+              src="public/img/FotoPerfil.png"
               alt="la foto de perfil del propietario del portfolio con un estilo anime"
               className="img rounded-5 responsive-img mt-4 mt-md-0"
               style={{

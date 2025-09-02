@@ -8,7 +8,7 @@ function Navegador() {
       <div className="container px-3 px-sm-2  bg-dark.bg-gradient">
         <a className="navbar-brand" href="#sobremi">
           <img
-            src="/img/Logo.png"
+            src="public/img/Logo.png"
             alt="Logo que dice SergioLB"
             className="d-inline-block align-text-top me-2 responsive-logo"
           />
