@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from "react-icons/fa";
-
+import { clamp } from "framer-motion";
 
 function ContactameModule() {
   useEffect(() => {
@@ -57,7 +57,10 @@ function ContactameModule() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaGithub className="fs-2 botonRedes" aria-label="icono para acceder al perfil de Github de Sergio Leal" />
+                  <FaGithub
+                    className="fs-2 botonRedes"
+                    aria-label="icono para acceder al perfil de Github de Sergio Leal"
+                  />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/sergiolealbenitez/"
@@ -65,15 +68,22 @@ function ContactameModule() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaLinkedin className="fs-2 botonRedes" aria-label="icono para acceder al perfil de linkedin de Sergio leal" />
+                  <FaLinkedin
+                    className="fs-2 botonRedes"
+                    aria-label="icono para acceder al perfil de linkedin de Sergio leal"
+                  />
                 </a>
-                <a href="mailto:sergiolea92@gmail.com?subject=Hola, he visto tu portfolio!&body=Quisiera contactarte" className="text-white fs-4" >
-                  <FaEnvelope className="fs-2 botonRedes" aria-label="icono para acceder a mandar un mail a Sergio Leal " />
+                <a
+                  href="mailto:sergiolea92@gmail.com?subject=Hola, he visto tu portfolio!&body=Quisiera contactarte"
+                  className="text-white fs-4"
+                >
+                  <FaEnvelope
+                    className="fs-2 botonRedes"
+                    aria-label="icono para acceder a mandar un mail a Sergio Leal "
+                  />
                 </a>
               </div>
             </div>
-
-           
 
             <div
               className="col-md-6 d-flex justify-content-md-end justify-content-center align-items-center"
@@ -82,12 +92,10 @@ function ContactameModule() {
             >
               <div
                 style={{
-                  backgroundColor: "#ffffff",
+                  backgroundColor: "#000000ff",
                   color: "#000",
                   padding: "15px 30px",
                   borderRadius: "40px",
-                  fontWeight: "bold",
-                  fontSize: "clamp(18px, 2.2vw, 25px)",
                   transition: "all 0.3s ease",
                   cursor: "pointer",
                 }}
@@ -100,8 +108,17 @@ function ContactameModule() {
                 }
               >
                 <span>
-                <FaWhatsapp className="fs-2" style={{paddingRight:"5px"}} aria-label="icono que indica que exite la posibilidad de contactar por whatsapp" />
-                 llámame 682 63 82 26</span>
+                  <img
+                    src="./img/logo-lenguaje-programacion.png"
+                    alt="Logotipo de lenguajes de programación"
+                    loading="lazy"
+                    decoding="async"
+                    style={{
+                      height: "clamp(80px, 8vw, 200px)",
+                      width: "auto",
+                    }}
+                  />
+                </span>
               </div>
             </div>
           </div>

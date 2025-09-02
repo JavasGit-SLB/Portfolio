@@ -291,3 +291,8 @@ scroll-behavior: smooth;
   flex: 1 1 auto;
   overflow: auto;
 }
+@media screen and (max-width: 520px) {
+  .card-proyecto-fixed {
+    height: 580px;
+  }
+}
