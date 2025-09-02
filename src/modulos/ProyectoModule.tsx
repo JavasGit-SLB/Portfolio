@@ -1,43 +1,43 @@
 import CardProyecto from "../components/CardProyecto";
 
 function ProyectoModule() {
-  const portfolio = ["public/img/portfolio/Mockup_PORFOTLIO.png"];
+  const portfolio = ["./img/portfolio/Mockup_PORFOTLIO.png"];
   const dungeoner = [
-    "public/img/dungeoner/mockup01.png",
-    "public/img/dungeoner/mockup02.png",
-    "public/img/dungeoner/mockup03.png",
-    "public/img/dungeoner/mockup04.png",
-    "public/img/dungeoner/mockup05.png",
+    "./img/dungeoner/mockup01.png",
+    "./img/dungeoner/mockup02.png",
+    "./img/dungeoner/mockup03.png",
+    "./img/dungeoner/mockup04.png",
+    "./img/dungeoner/mockup05.png",
   ];
   const preguntas = [
-    "public/img/preguntas/MOCKUP_Quest.png",
-    "public/img/preguntas/MOCKUP_Quest-1.png",
-    "public/img/preguntas/MOCKUP_Quest-2.png",
-    "public/img/preguntas/MOCKUP_Quest-3.png",
-    "public/img/preguntas/MOCKUP_Quest-4.png",
-    "public/img/preguntas/MOCKUP_Quest-5.png",
-    "public/img/preguntas/MOCKUP_Quest-6.png",
-    "public/img/preguntas/MOCKUP_Quest-7.png",
-    "public/img/preguntas/MOCKUP_Quest-10.png",
-    "public/img/preguntas/MOCKUP_Quest-8.png",
-    "public/img/preguntas/MOCKUP_Quest-9.png",
-    "public/img/preguntas/MOCKUP_Quest-11.png",
+    "./img/preguntas/MOCKUP_Quest.png",
+    "./img/preguntas/MOCKUP_Quest-1.png",
+    "./img/preguntas/MOCKUP_Quest-2.png",
+    "./img/preguntas/MOCKUP_Quest-3.png",
+    "./img/preguntas/MOCKUP_Quest-4.png",
+    "./img/preguntas/MOCKUP_Quest-5.png",
+    "./img/preguntas/MOCKUP_Quest-6.png",
+    "./img/preguntas/MOCKUP_Quest-7.png",
+    "./img/preguntas/MOCKUP_Quest-10.png",
+    "./img/preguntas/MOCKUP_Quest-8.png",
+    "./img/preguntas/MOCKUP_Quest-9.png",
+    "./img/preguntas/MOCKUP_Quest-11.png",
   ];
   const torneo = [
-    "public/img/torneo/MOCKUP_TORNEO-0.png",
-    "public/img/torneo/MOCKUP_TORNEO-1.png",
-    "public/img/torneo/MOCKUP_TORNEO-2.png",
-    "public/img/torneo/MOCKUP_TORNEO-3.png",
-    "public/img/torneo/MOCKUP_TORNEO-4.png",
-    "public/img/torneo/MOCKUP_TORNEO-5.png",
-    "public/img/torneo/MOCKUP_TORNEO-6.png",
+    "./img/torneo/MOCKUP_TORNEO-0.png",
+    "./img/torneo/MOCKUP_TORNEO-1.png",
+    "./img/torneo/MOCKUP_TORNEO-2.png",
+    "./img/torneo/MOCKUP_TORNEO-3.png",
+    "./img/torneo/MOCKUP_TORNEO-4.png",
+    "./img/torneo/MOCKUP_TORNEO-5.png",
+    "./img/torneo/MOCKUP_TORNEO-6.png",
 
   ];
   const magic = [
-    "public/img/magic/MOCKUP_MAGIC-1.png",
-    "public/img/magic/MOCKUP_MAGIC-2.png",
-    "public/img/magic/MOCKUP_MAGIC-3.png",
-    "public/img/magic/MOCKUP_MAGIC-4.png",
+    "./img/magic/MOCKUP_MAGIC-1.png",
+    "./img/magic/MOCKUP_MAGIC-2.png",
+    "./img/magic/MOCKUP_MAGIC-3.png",
+    "./img/magic/MOCKUP_MAGIC-4.png",
 
   ];
 

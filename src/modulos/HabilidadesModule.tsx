@@ -100,7 +100,7 @@ desarrollo no he parado de aprender }"
 
       <div className="container px-3 px-sm-1 pt-5 pt-sm-5">
         <img
-          src="public/img/Lenguajes.png"
+          src="./img/Lenguajes.png"
           className="img-fluid rounded-5"
           alt="Imagen que muestra unas manos en un teclado y todos los logotipos de las tecnologias que maneja."
         />
