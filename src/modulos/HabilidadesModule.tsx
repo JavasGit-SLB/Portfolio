@@ -45,6 +45,7 @@ desarrollo no he parado de aprender }"
         <BarraSkill
           textoTitulo="FRAMEWORKS FRONT"
           habilidades={[
+            { herramienta: "|| NextJS", valor: 80 },
             { herramienta: "|| React", valor: 85 },
             { herramienta: "|| Tailwind CSS", valor: 70 },
             { herramienta: "|| Bootstrap", valor: 80 },
@@ -54,14 +55,14 @@ desarrollo no he parado de aprender }"
           textoTitulo="LENGUAJES BACK-END"
           habilidades={[
             { herramienta: "|| Java", valor: 90 },
-            { herramienta: "|| Node.js", valor: 50 },
+            { herramienta: "|| Node.js", valor: 75 },
             { herramienta: "|| Python", valor: 60 },
           ]}
         />
         <BarraSkill
           textoTitulo="FRAMEWORKS BACK"
           habilidades={[
-            { herramienta: "|| Express.js", valor: 40 },
+            { herramienta: "|| Express.js", valor: 70 },
             { herramienta: "|| Spring Boot (Learning)", valor: 45 },
           ]}
         />
@@ -77,8 +78,17 @@ desarrollo no he parado de aprender }"
           textoTitulo="INTELIGENCIA ARTIFICIAL"
           habilidades={[
             { herramienta: "|| Prompt Engineering", valor: 95 },
-            { herramienta: "|| Automatización", valor: 90 },
             { herramienta: "|| IA productivity", valor: 100 },
+            { herramienta: "|| LLM", valor: 85 },
+            { herramienta: "|| MCP (learning)", valor: 60 },
+          ]}
+        />
+        <BarraSkill
+          textoTitulo="Automatización"
+          habilidades={[
+            { herramienta: "|| Make", valor: 70 },
+            { herramienta: "|| N8n", valor: 65 },
+            
           ]}
         />
         <BarraSkill

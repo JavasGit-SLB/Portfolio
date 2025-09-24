@@ -1,17 +1,30 @@
-import  { useRef } from "react";
+import  { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 type textobarraProps = {
   textoTitulo: string;
+  visibleBarra?: boolean;
   habilidades: {
     herramienta: string;
-    valor: number;
+    valor?: number;
   }[];
 };
 
-function BarraSkill({ textoTitulo, habilidades }: textobarraProps) {
+function BarraSkill({ textoTitulo, habilidades , visibleBarra}: textobarraProps) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const [visible, setVisible] = useState(visibleBarra ?? true);
+  
+  const handleSetVisible = (visibleBarra: boolean | undefined) => {
+    if (visibleBarra === false) {
+      setVisible(false);
+    }
+  };
+
+useEffect(() => {
+  handleSetVisible(visibleBarra);
+}, [visibleBarra]);
+  
 
   return (
     <div ref={ref} className="container mt-5">
@@ -44,7 +57,7 @@ function BarraSkill({ textoTitulo, habilidades }: textobarraProps) {
           </div>
 
           {/* Barra animada */}
-          <div className="col-md-8 d-flex justify-content-center justify-content-lg-start align-items-center">
+         {visible && <div className="col-md-8 d-flex justify-content-center justify-content-lg-start align-items-center">
             <div
               className="progress w-100"
               role="progressbar"
@@ -69,7 +82,7 @@ function BarraSkill({ textoTitulo, habilidades }: textobarraProps) {
                 }}
               />
             </div>
-          </div>
+          </div>}
         </div>
       ))}
     </div>
