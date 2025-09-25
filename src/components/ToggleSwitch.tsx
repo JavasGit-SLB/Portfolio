@@ -1,40 +1,37 @@
 import React, { useState } from "react";
 
 interface ToggleSwitchProps {
-  onLeftLabel: string;
-  onRightLabel: string;
-  onToggle: (isLeft: boolean) => void;
-  ariaLabel?:string;
+  labels: [string, string, string];
+  onToggle: (selectedIndex: number) => void;
+  ariaLabel?: string;
 }
 
 const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
-  onLeftLabel,
-  onRightLabel,
+  labels,
   onToggle,
   ariaLabel = "Toggle entre opciones",
 }) => {
-  const [isRight, setIsRight] = useState(true);
+  const [selected, setSelected] = useState(0);
 
-  const toggle = () => {
-    const newState = !isRight;
-    setIsRight(newState);
-    onToggle(newState);
+  const handleToggle = (index: number) => {
+    setSelected(index);
+    onToggle(index);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    let newIndex = selected;
+    if (e.key === "ArrowRight") newIndex = (selected + 1) % 3;
+    if (e.key === "ArrowLeft") newIndex = (selected + 2) % 3;
     if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      toggle();
+      handleToggle(newIndex);
     }
   };
 
   return (
     <div
-    role="switch"
-      aria-checked={isRight}
+      role="tablist"
       aria-label={ariaLabel}
       tabIndex={0}
-      onClick={toggle}
       onKeyDown={handleKeyDown}
       className="position-relative d-inline-flex align-items-center justify-content-between"
       style={{
@@ -52,14 +49,13 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
         userSelect: "none",
         transition: "background 0.3s ease-in-out",
       }}
-      
     >
       <div
         style={{
           position: "absolute",
           top: "5px",
-          left: isRight ? "4px" : "calc(50% + 2px)",
-          width: "calc(50% - 6px)",
+          left: `calc(${selected * 33.333}% + 4px)`,
+          width: "calc(33.333% - 8px)",
           height: "64px",
           backgroundColor: "#F7A009",
           borderRadius: "20px",
@@ -67,18 +63,24 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
           zIndex: 0,
         }}
       />
-      <div
-        className="w-50 text-center"
-        style={{ zIndex: 1, color: isRight ? "white" : "black" }}
-      >
-        {onLeftLabel}
-      </div>
-      <div
-        className="w-50 text-center"
-        style={{ zIndex: 1, color: isRight ? "black" : "white" }}
-      >
-        {onRightLabel}
-      </div>
+      {labels.map((label, idx) => (
+        <div
+          key={label}
+          className="text-center"
+          style={{
+            width: "33.333%",
+            zIndex: 1,
+            color: selected === idx ? "white" : "black",
+            cursor: "pointer",
+            fontWeight: selected === idx ? "bold" : "normal",
+          }}
+          role="tab"
+          aria-selected={selected === idx}
+          onClick={() => handleToggle(idx)}
+        >
+          {label}
+        </div>
+      ))}
     </div>
   );
 };
