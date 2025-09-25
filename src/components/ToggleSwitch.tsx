@@ -73,6 +73,7 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
             color: selected === idx ? "white" : "black",
             cursor: "pointer",
             fontWeight: selected === idx ? "bold" : "normal",
+            fontSize: "clamp(13px, calc(10px + 0.455vw), 19px)",
           }}
           role="tab"
           aria-selected={selected === idx}
