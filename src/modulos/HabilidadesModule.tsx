@@ -84,7 +84,7 @@ desarrollo no he parado de aprender }"
           ]}
         />
         <BarraSkill
-          textoTitulo="Automatización"
+          textoTitulo="AUTOMATIZACIÓN"
           habilidades={[
             { herramienta: "|| Make", valor: 70 },
             { herramienta: "|| N8n", valor: 65 },
@@ -137,7 +137,7 @@ desarrollo no he parado de aprender }"
           habilidades={[{ herramienta: "|| Coche B", valor: 100 }]}
         />
         <BarraSkill
-          textoTitulo="ADAPTACION"
+          textoTitulo="ADAPTACIÓN"
           habilidades={[
             { herramienta: "|| Teletrabajo", valor: 100 },
             { herramienta: "|| Presencial", valor: 100 },
