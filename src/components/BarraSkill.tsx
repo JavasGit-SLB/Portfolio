@@ -1,4 +1,4 @@
-import  { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 type textobarraProps = {
@@ -10,21 +10,24 @@ type textobarraProps = {
   }[];
 };
 
-function BarraSkill({ textoTitulo, habilidades , visibleBarra}: textobarraProps) {
+function BarraSkill({
+  textoTitulo,
+  habilidades,
+  visibleBarra,
+}: textobarraProps) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [visible, setVisible] = useState(visibleBarra ?? true);
-  
+
   const handleSetVisible = (visibleBarra: boolean | undefined) => {
     if (visibleBarra === false) {
       setVisible(false);
     }
   };
 
-useEffect(() => {
-  handleSetVisible(visibleBarra);
-}, [visibleBarra]);
-  
+  useEffect(() => {
+    handleSetVisible(visibleBarra);
+  }, [visibleBarra]);
 
   return (
     <div ref={ref} className="container mt-5">
@@ -57,32 +60,38 @@ useEffect(() => {
           </div>
 
           {/* Barra animada */}
-         {visible && <div className="col-md-8 d-flex justify-content-center justify-content-lg-start align-items-center">
-            <div
-              className="progress w-100"
-              role="progressbar"
-              aria-label={`Progreso en ${item.herramienta}`}
-              aria-valuenow={item.valor}
-              aria-valuemin={0}
-              aria-valuemax={100}
-              style={{
-                height: "clamp(10px, 2vw, 15px)",
-                backgroundColor: "grey",
-                overflow: "hidden",
-              }}
-            >
-              <motion.div
-                className="progress-bar"
-                initial={{ width: 0 }}
-                animate={{ width: inView ? `${item.valor}%` : 0 }}
-                transition={{ duration: 1.2, ease: "easeOut", delay: index * 0.2 }}
+          {visible && (
+            <div className="col-md-8 d-flex justify-content-center justify-content-lg-start align-items-center">
+              <div
+                className="progress w-100"
+                role="progressbar"
+                aria-label={`Progreso en ${item.herramienta}`}
+                aria-valuenow={item.valor}
+                aria-valuemin={0}
+                aria-valuemax={100}
                 style={{
-                  backgroundColor: "#F7A009",
-                  height: "100%",
+                  height: "clamp(10px, 2vw, 15px)",
+                  backgroundColor: "grey",
+                  overflow: "hidden",
                 }}
-              />
+              >
+                <motion.div
+                  className="progress-bar"
+                  initial={{ width: 0 }}
+                  animate={{ width: inView ? `${item.valor}%` : 0 }}
+                  transition={{
+                    duration: 1.2,
+                    ease: "easeOut",
+                    delay: index * 0.2,
+                  }}
+                  style={{
+                    backgroundColor: "#F7A009",
+                    height: "100%",
+                  }}
+                />
+              </div>
             </div>
-          </div>}
+          )}
         </div>
       ))}
     </div>

@@ -1,4 +1,3 @@
-
 import BannerPrePagina from "../components/BannerPrePagina";
 import BarraSkill from "../components/BarraSkill";
 
@@ -88,7 +87,6 @@ desarrollo no he parado de aprender }"
           habilidades={[
             { herramienta: "|| Make", valor: 70 },
             { herramienta: "|| N8n", valor: 65 },
-            
           ]}
         />
         <BarraSkill
