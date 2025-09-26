@@ -46,6 +46,7 @@ desarrollo no he parado de aprender }"
           habilidades={[
             { herramienta: "|| NextJS", valor: 80 },
             { herramienta: "|| React", valor: 85 },
+            { herramienta: "|| Angular", valor: 70 },
             { herramienta: "|| Tailwind CSS", valor: 70 },
             { herramienta: "|| Bootstrap", valor: 80 },
           ]}
